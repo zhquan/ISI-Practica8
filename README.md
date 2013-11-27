@@ -101,10 +101,10 @@ To run the project locally, clone the repo and run ```meteor``` inside it. You c
     Linea 84:
             Template.input.events = {
                 'keydown input#message' : function (event) {
-	            if (event.which == 13) { 
-	                if (Meteor.userId()){..} --> Ejecuta este if
-	                else {..}
-	            }
+                if (event.which == 13) { 
+                    if (Meteor.userId()){..} --> Ejecuta este if
+                    else {..}
+                }
                 }
             }
 
@@ -113,12 +113,12 @@ To run the project locally, clone the repo and run ```meteor``` inside it. You c
     Linea 46:
         Meteor.methods({
             matchFinish: function (game, points) {
-        	if (this.userId)   
-	            Matches.insert ({user_id: this.userId, 
-		    	     time_end: Date.now(),
-	    		     points: points,
-	    		     game_id: game
-	    		});
+                if (this.userId)   
+                    Matches.insert ({user_id: this.userId, 
+                    time_end: Date.now(),
+                    points: points,
+                    game_id: game
+                });
             }
         });
     Como no estas autenticado no entras en el if (this.userId) y no muestra tus puntos
@@ -128,12 +128,12 @@ To run the project locally, clone the repo and run ```meteor``` inside it. You c
     Linea 46:
         Meteor.methods({
             matchFinish: function (game, points) {
-        	if (this.userId)   
-	            Matches.insert ({user_id: this.userId, 
-		    	     time_end: Date.now(),
-	    		     points: points,
-	    		     game_id: game
-	    		});
+                if (this.userId)   
+                    Matches.insert ({user_id: this.userId, 
+                    time_end: Date.now(),
+                    points: points,
+                    game_id: game
+                });
             }
         });
     Como estas autenticado no entras en el if (this.userId), muestra tus puntos con el nombre, fecha, puntos, juego.
