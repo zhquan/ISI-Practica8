@@ -80,12 +80,12 @@ To run the project locally, clone the repo and run ```meteor``` inside it. You c
     Linea 84:
             Template.input.events = {
                 'keydown input#message' : function (event) {
-	            if (event.which == 13) { 
-	                if (Meteor.userId()){..}
-	                else {    --> Ejecuta esto porque no esta autentificado
-		                $("#login-error").show();
-	                }
-	            }
+                if (event.which == 13) { 
+                    if (Meteor.userId()){..}
+                    else {    --> Ejecuta esto porque no esta autentificado
+                        $("#login-error").show();
+                    }
+                }
                 }
             }
 
